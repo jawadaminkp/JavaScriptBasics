@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is first button')">
+            1st Button
+        </button>
+    </div>
+
+
+    <div class="jumbotron text-center">
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is 2nd button')">
+            1st Button
+        </button>
+    </div>
+
+    <script>
+
+        function saySomething(msg = 'Hello & good bye' , whisper = false ){//default value given
+            
+            if (whisper){
+                console.log(`%c${msg}`, 'font-size:15px');
+            } else {
+                console.log(msg);
+            }
+        }
+
+        function saySomething2(msg = 'first msg', msg2 = '2nd msg'){
+            console.log(msg + msg2);
+        }
+
+      
+        saySomething("My name is Jawad Amin", true);
+        saySomething();
+        saySomething();
+
+        saySomething2('this is my msg');
+        saySomething2('1','2');      
+
+        //simple function
+        function getSquare(a){
+            sq = a * a;
+            return sq;
+        }
+
+
+        const squareOf3 = getSquare(3);
+
+        console.log('Sqaure of 3:' + squareOf3);
+        
+
+        //function stored in var
+
+        const getCube = function(a){
+            return a * a * a;
+        }
+
+        console.log(getCube(3));
+
+        //arrow function syntax
+
+        const getCube2 = (b) => {
+
+            return b * b * b
+
+        }
+
+        console.log(getCube2(2));
+
+
+   // push2(); //it doesn't get executed since its a var in real and not a function declaration // it returns error
+
+       const punch2 = () => {
+           console.log("Punch 2")
+       }
+
+
+
+        punch(); //it will still work as the code automatically jumps to the top
+
+        function punch(){
+            console.log('Punch');
+        }
+
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+    <div class="dog-list"> </div>
+
+    <script>
+
+// const name = prompt("what is your name");
+const username = 'amin';
+        console.group("if/eles if/else")
+
+            if ( name == 'jawada' || 'amin') {
+
+                // alert("Hello!");
+            } else if (name == 'holly') {
+
+                console.log("this is holly");
+
+            } else {
+                console.log("not jawad or holly");
+            }
+         
+
+        console.groupEnd();
+
+        const dogList = document.querySelector('.dog-list');
+            const dogs = [
+                {name: 'Jawad', type: '03045767720'},
+                {name: 'Amin', type: '03005838401'}
+            ];
+
+        // console.group("For loops")
+
+        //     for (let i = 0; i < dogs.length; i++){
+        //         //grab teh dog
+        //         const dog = dogs[i];
+
+        //         const dogData = document.createElement('div');
+        //         dogData.classList.add("jumbotron", 'text-center');
+        //         dogData.innerText = `${dog.name} : ${dog.type}`;
+        //         dogList.appendChild(dogData);
+        //     }
+
+        // console.groupEnd();
+
+        // console.group("While loops")
+        
+        // let i = 0;
+
+        // while(i < dogs.length){
+
+        //     const dog = dogs[i];
+
+        //     const dogData = document.createElement('div');
+        //     dogData.classList.add("jumbotron", 'text-center');
+        //     dogData.innerText = `${dog.name} : ${dog.type}`;
+        //     dogList.appendChild(dogData);
+
+        //     i++;
+        // }
+        // console.groupEnd();
+
+
+        console.group("Do While loops")
+        
+        let i = 0;
+
+        do {
+
+            const dog = dogs[i];
+
+            const dogData = document.createElement('div');
+            dogData.classList.add("jumbotron", 'text-center');
+            dogData.innerText = `${dog.name} : ${dog.type}`;
+            dogList.appendChild(dogData);
+
+            i++;
+
+          
+        }   while ( i < dogs.length);
+
+        console.groupEnd();
+
+
+
+
+        console.group("for of iteration")
+        
+        for (let  dog of dogs) { 
+        
+            const dogData = document.createElement('div');
+            dogData.classList.add("jumbotron", 'text-center');
+            dogData.innerText = `${dog.name} : ${dog.type}`;
+            dogList.appendChild(dogData);
+
+
+        }
+
+        console.groupEnd();
+    
+
+
+
+
+
+    </script>
+
+</body>
+</html>

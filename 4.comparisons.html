@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+
+    <script>
+
+        const org = 'jawad';
+        const clone = 'JAWAD';  
+
+        console.group("Strings")
+            console.log(org == clone); //flase
+            console.log(org == 'jawad'); //true
+            console.log(org == clone.toLocaleLowerCase()); //true
+
+        console.groupEnd();
+
+        const num1 = 10;
+        const num2 = '10';
+
+        console.group("Numbers")
+
+            console.log(num1 == num2); //true //are the operands equal? + auto conversion is allowed
+            console.log(num1 === num2); //false  //are the opernads equal? + converstion is not allowed //type must be same
+            console.log(num1 != num2); //fasle
+            console.log(num1 !== num2); //true
+        console.groupEnd();
+
+            let what; //undefined
+            let thing = null; 
+
+        console.group("Booleans")
+            console.log(Boolean(org)); //true
+            console.log(Boolean(what)); //false
+            console.log(Boolean(thing)); //false
+            console.log(Boolean(num1)); //true
+            console.log(Boolean({})); //ture //empty object evaluates to true
+            console.log(Boolean([])); //true
+        console.groupEnd();
+
+        const firstArr = [1, 2, 3];
+        const secondArr = [1, 2, 3];
+
+        const firstObj = { color: 'red'};
+        const secondObj = { color: 'red'};
+
+        console.group("Objects and Arrays in comparison")
+            console.log(firstArr == secondArr); //false
+            console.log(firstObj == secondObj); //false
+
+        console.groupEnd();
+
+        console.group("And / Or")
+            console.log(Boolean('one') && Boolean("two")); //true
+            console.log(Boolean('one') && Boolean("")); //false
+            console.log(Boolean('one') && Boolean(" ")); //true //space isn't treated as if it is all empty
+            console.log(Boolean('one') || Boolean("")); //true
+            console.log(Boolean("") || Boolean("")); //false
+        console.groupEnd();
+
+
+
+
+
+    </script>
+
+</body>
+</html>

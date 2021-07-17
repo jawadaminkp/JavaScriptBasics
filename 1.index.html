@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Jawad</h1>
+
+        <button type="button" class="btn btn-danger" onclick="changeText()">
+            
+            change text
+
+        <button type="button" class="btn btn-primary" onclick="changeText2()">
+            
+                undo
+    
+        </button>
+
+        </button>
+    </div>
+
+
+    <script>
+         
+        
+
+        const header = document.querySelector("h1");
+
+        function changeText() {
+
+            header.innerText = "Amin"
+
+        }
+
+        const changeText2 = () => {
+
+            header.innerText = 'Jawad'
+
+        }
+ 
+    </script>
+
+</body>
+</html>

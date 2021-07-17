@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+
+    <script>
+
+        const myobj = { 
+            name: 'Jawad',
+            id: 2,
+            dob: '02/02/2000',
+
+            speak: () =>{
+                return 'This is record of jawad';
+            },
+
+            speakAgain: (sound = 'Jawad') => {
+                return `this is record of ${sound}`;
+            }
+        }
+
+       console.log(myobj);
+       console.log(myobj.name); //Jawad
+       console.log(myobj[name]); //undefined
+       console.log(myobj['name']); //Jawad
+       
+      const thingToLookFor = 'name';
+
+      console.log(myobj[thingToLookFor]); //Jawad
+      console.log(myobj.thingToLookFor); //undefined
+
+      console.log(myobj.speak()); //This is record of jawad
+      console.log(myobj.speakAgain()); // This is record of jawad
+      console.log(myobj.speakAgain("Jawad Amin"));
+    
+    </script>
+
+</body>
+</html>

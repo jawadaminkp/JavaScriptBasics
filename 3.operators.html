@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+
+    <script>
+        let a = 10,
+        b = 3,
+        c= 15;
+        const d = '5',
+        e = 'my name',
+        f = 'is javad amin';
+
+
+
+    console.group("Addition")
+        console.log(a + b); //13
+        console.log(a+c); //25
+        console.log(e + ' ' + f); // my name is javad amin
+        console.log(a + d); // 10 + '5' => 105 //string supercededs int
+        console.log('5' + 10); //510
+        console.log(10 + '5' + 10); //10510
+    console.groupEnd();
+
+
+    console.group("Subtraction")
+        console.log(a - b); // 7
+        console.log(e - f ); //NaN
+        console.log(a - d); //5 int supercedes string 
+        console.log(a - e); // NaN
+        console.log('1102' - 5); //1097
+    console.groupEnd();
+
+
+    console.group("Multiplication")
+        console.log(a*b);//30
+        console.log(a*d);//50
+        console.log(a*e);//NaN  
+    console.groupEnd();
+
+    console.group("Division")
+        console.log(a/b);//30
+        console.log(a/d);//50
+        console.log(a/e);//NaN  
+    console.groupEnd();
+
+
+    console.group("Equal Operator")
+        console.log(1097 === 1097) ; //true
+        console.log('1102' - 5 === Number('1097')) ; //true
+        console.log('1102' - 5 === '1097'); //false
+    console.groupEnd();
+
+
+
+    console.group("Incrementing / Decrementing")
+        console.log(a++); //10
+        console.log(a);//11
+        console.log(a--);//11
+        console.log(a);//10
+        
+
+    console.groupEnd();
+
+    </script>
+
+</body>
+</html>

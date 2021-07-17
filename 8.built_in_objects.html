@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Getting Started with JavaScript</title>
+
+</head>
+<body>
+
+
+    <script>
+        const first = 'this is a string';
+        const second  = String('this is a string');
+
+        console.log('this is a string'.toUpperCase());
+        console.log(String('this is a string').toUpperCase());
+
+
+
+        console.group('Primitive vs Objects')
+            console.log ( first == second);
+            console.log ( first === second);
+
+            console.log(
+                typeof first, typeof String('this is a string'), typeof new String('this is a new stirng')
+            );
+        console.groupEnd();
+
+
+        console.group('Strings')
+            console.log(first.toUpperCase());
+            console.log(second.toLocaleLowerCase());
+            console.log(first.startsWith('abc')); //false
+            console.log('jawad'.repeat(20));
+            console.log('         this is a bottle'.trim());
+        console.groupEnd();
+
+
+        console.group('Numbers & Math')
+
+            //console.log(1.toString) //invalid
+
+            console.log(1.0.toString + 'is a numer');//1
+            console.log(1..toString); //1
+            console.log((1).toString); //1
+            console.log(Number.isInteger(34.2)); //false
+            console.log((1.34523).toFixed(2)); // 1.34
+            console.log(Math.random().toFixed(2), 
+            Math.ceil(1.57), //2
+            Math.floor(6.3) // 6
+            );
+
+            const myArr = [ 'jawad' , 'spog', 'holly'];
+            console.group('Array')
+                console.log(myArr.length);
+                console.log(myArr.join('-'));
+                console.log(myArr.push('3'), myArr);
+                console.log(myArr.pop, myArr);
+
+
+                myArr.forEach((user) => {
+                    console.log(user);
+                });
+
+            console.groupEnd();
+
+
+        console.groupEnd();
+
+// W3 Schools Reference
+
+// http://www.w3schools.com/jsref/default.asp
+
+
+// Mozilla Developer Network Reference (MDN)
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+
+
+    </script>
+
+</body>
+</html>
